@@ -86,7 +86,7 @@ def process_list_file(list_path: Path) -> None:
         rule["domain"] = domain
 
     output = {
-        "version": 4,
+        # "version": 4,
         "rules": [rule],
     }
 
