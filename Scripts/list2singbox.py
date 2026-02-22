@@ -41,6 +41,7 @@ def process_list_file(list_path: Path) -> None:
     """
     domain_suffix: list[str] = []
     domain: list[str] = []
+    domain_regex: list[str] = []
     skipped: list[tuple[int, str]] = []  # (行号, 原始内容)
 
     with list_path.open(encoding="utf-8") as f:
@@ -62,7 +63,17 @@ def process_list_file(list_path: Path) -> None:
                 continue
 
             # 按前缀分类
-            if stripped.startswith(_SUFFIX_PREFIXES):
+            if stripped.endswith(".*"):
+                if stripped.startswith(_SUFFIX_PREFIXES):
+                    core = stripped[2:-2]
+                    prefix = r".+\."
+                else:
+                    core = stripped[:-2]
+                    prefix = ""
+                core_escaped = core.replace(".", r"\.")
+                suffix = r"\.[^.]+"
+                domain_regex.append(prefix + core_escaped + suffix)
+            elif stripped.startswith(_SUFFIX_PREFIXES):
                 # 去掉前两个字符（+. 或 *.）
                 domain_suffix.append(stripped[2:])
             else:
@@ -84,6 +95,8 @@ def process_list_file(list_path: Path) -> None:
         rule["domain_suffix"] = domain_suffix
     if domain:
         rule["domain"] = domain
+    if domain_regex:
+        rule["domain_regex"] = domain_regex
 
     output = {
         "version": 3,
@@ -98,11 +111,11 @@ def process_list_file(list_path: Path) -> None:
         json.dump(output, f, ensure_ascii=False, indent=2)
         f.write("\n")  # 文件末尾换行
 
-    total = len(domain_suffix) + len(domain)
+    total = len(domain_suffix) + len(domain) + len(domain_regex)
     print(
         f"[{datetime.now().strftime('%H:%M:%S')}] "
         f"{list_path.name} → {out_path.name}  "
-        f"(domain_suffix: {len(domain_suffix)}, domain: {len(domain)}, 跳过: {len(skipped)} 行)"
+        f"(domain_suffix: {len(domain_suffix)}, domain: {len(domain)}, domain_regex: {len(domain_regex)}, 跳过: {len(skipped)} 行)"
     )
 
 

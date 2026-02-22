@@ -12,7 +12,8 @@
         "xdgame.co",
         "netloading.net",
         "hgmri.com",
-        "4kvm.pro"
+        "4kvm.pro",
+        "jsdelivr.net"
       ],
       "domain": [
         "convertio.co",
@@ -28,6 +29,10 @@
         "upfile.live",
         "sosotiku.com",
         "claw.cloud"
+      ],
+      "domain_regex": [
+        "gh-proxy\\.[^.]+",
+        ".+\\.libvio\\.[^.]+"
       ]
     }
   ]
