@@ -1,0 +1,26 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "domain_suffix": [
+        "scribens.com",
+        "gamer520.com",
+        "xiaodao.biz",
+        "x6g.com",
+        "xdgame.com",
+        "xdgamebox.com",
+        "xdgame.co",
+        "netloading.net",
+        "hgmri.com"
+      ],
+      "domain": [
+        "convertio.co",
+        "igg-games.com",
+        "webnote.cc",
+        "jisuchuan.com",
+        "pansou.app",
+        "koofer.net"
+      ]
+    }
+  ]
+}

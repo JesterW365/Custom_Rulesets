@@ -1,0 +1,17 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "domain_suffix": [
+        "tpns.tencent.com",
+        "open-if.douyin.com",
+        "dsp-api-cn.metricslinks.com"
+      ],
+      "domain": [
+        "lf-cdn-tos.bytescm.com",
+        "webcast-open.douyin.com",
+        "dsp-api-cn.metriclx.com"
+      ]
+    }
+  ]
+}
