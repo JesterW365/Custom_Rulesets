@@ -1,0 +1,4 @@
+# 这两个转换脚本均使用了 Python 标准库，
+# （如 json, pathlib, logging, datetime, subprocess 等），
+# 没有依赖任何第三方包（如 requests, pyyaml 等），
+# 因此此文件当前可以保持为空。
