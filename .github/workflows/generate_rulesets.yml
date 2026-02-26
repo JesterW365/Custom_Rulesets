@@ -2,6 +2,9 @@ name: Generate Rulesets
 
 on:
   workflow_dispatch:  # 允许手动触发
+  
+permissions:
+  contents: write
 
 jobs:
   generate:
