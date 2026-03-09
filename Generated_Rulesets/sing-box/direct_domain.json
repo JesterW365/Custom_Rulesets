@@ -66,7 +66,8 @@
         "upfile.live",
         "sosotiku.com",
         "claw.cloud",
-        "zland.club"
+        "zland.club",
+        "haoportal.huazhu.com"
       ],
       "domain_regex": [
         "gh-proxy\\.[^.]+",
