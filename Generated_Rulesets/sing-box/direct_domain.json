@@ -14,7 +14,6 @@
         "hgmri.com",
         "4kvm.pro",
         "jsdelivr.net",
-        "packyapi.com",
         "jeniya.cn",
         "aihubmix.com",
         "ocoolai.com",
@@ -46,13 +45,17 @@
         "onethingai.com",
         "rjj.cc",
         "ggff.net",
-        "us.ci",
+        "bilapi.me",
         "aicodemirror.com",
         "uiuiapi.com",
         "hk.uniapi.io",
         "deepapi.net",
         "deepapi.org",
-        "4sapi.com"
+        "4sapi.com",
+        "cdn-krill-ai.com",
+        "olevod.com",
+        "222dvd.com",
+        "luanshuart.com"
       ],
       "domain": [
         "convertio.co",
@@ -69,7 +72,8 @@
         "sosotiku.com",
         "claw.cloud",
         "zland.club",
-        "haoportal.huazhu.com"
+        "haoportal.huazhu.com",
+        "api-slb.krill-ai.com"
       ],
       "domain_regex": [
         "gh-proxy\\.[^.]+",
